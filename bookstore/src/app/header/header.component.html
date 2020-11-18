@@ -17,6 +17,9 @@
           >Sign out</a
         >
       </li>
+      <li routerLinkActive="active">
+        <a routerLink="auth/passwordLess" *ngIf="!isAuth">Forget Password</a>
+      </li>
     </ul>
   </div>
 </nav>

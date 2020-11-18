@@ -15,10 +15,12 @@ import { AuthGuardService } from './services/auth-guard.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
+import { PasswordLessComponent } from './auth/password-less/password-less.component';
 
 const appRoutes: Routes = [
   { path: 'auth/signup', component: SignupComponent },
   { path: 'auth/signin', component: SigninComponent },
+  { path: 'auth/passwordLess', component: PasswordLessComponent },
   {
     path: 'books',
     canActivate: [AuthGuardService],
@@ -45,7 +47,8 @@ const appRoutes: Routes = [
     BookListComponent,
     SingleBookComponent,
     BookFormComponent,
-    HeaderComponent
+    HeaderComponent,
+    PasswordLessComponent
   ],
   imports: [
     BrowserModule,
